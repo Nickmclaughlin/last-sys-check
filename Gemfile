@@ -38,10 +38,8 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 group :development, :test do
-  gem 'pry-rails'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
   gem 'factory_girl_rails'
-  gem 'dotenv-rails'
 end
