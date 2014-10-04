@@ -6,8 +6,8 @@ feature "user can create a new manufacturer" do
     visit root_path
     click_on "Submit New Manufacturer"
 
-    fill_in("Name", with: manufacturer.name )
-    fill_in("Country", with: manufacturer.country )
+    fill_in("Name", with: manufacturer.name)
+    fill_in("Country", with: manufacturer.country)
 
     click_on("Create Manufacturer")
 
