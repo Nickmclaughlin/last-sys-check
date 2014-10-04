@@ -1,5 +1,9 @@
 <%= flash[:notice] %><br>
-<%= @manufacturer.name %> --- <%= @manufacturer.country %>
+
+
+
+<h1>List of Cars Made by <%= @manufacturer.name %></h1>
+<h4>Country: <%= @manufacturer.country %></h4>
 <ol>
   <% @manufacturer.cars.each do |car| %>
     <li> <%= car.color %> -- <%= car.year %> -- <%= car.mileage %></li>

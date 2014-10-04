@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature "user can create a new manufacturer" do
-  scenario "visits root path sees link to submit new manufacturer and submits" do
+  scenario "visits root path clicks link to submit manufacturer and submits" do
     manufacturer = FactoryGirl.create(:manufacturer)
     visit root_path
     click_on "Submit New Manufacturer"
