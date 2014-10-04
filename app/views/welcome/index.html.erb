@@ -1,2 +1,10 @@
 <%= flash[:notice] %>
-<%= link_to "Submit New Manufacturer", new_manufacturer_path %>
+<%= link_to "Submit New Manufacturer", new_manufacturer_path %><br>
+
+
+List of Manufacturers
+<ol>
+  <% @manufacturers.each do |manufacturer| %>
+    <li><%= link_to manufacturer.name, manufacturer_path(manufacturer) %></li>
+  <% end %>
+</ol>

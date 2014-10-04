@@ -14,8 +14,13 @@ class ManufacturersController < ActionController::Base
     end
   end
 
+  def show
+    @manufacturer = Manufacturer.find(params[:id])
+    @car = Car.new
+  end
+
   private
   def manufacturer_params
-    params.require(:manufacturer).permit(:name, :country)
+    params.require(:manufacturer).permit(:name, :country, :id)
   end
 end
