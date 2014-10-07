@@ -10,6 +10,7 @@ class ManufacturersController < ActionController::Base
       flash[:notice] = "You successfully created a manufacturer."
       redirect_to root_path
     else
+      flash[:notice] = "Your record could not be saved."
       render 'new'
     end
   end
@@ -20,6 +21,7 @@ class ManufacturersController < ActionController::Base
   end
 
   private
+
   def manufacturer_params
     params.require(:manufacturer).permit(:name, :country, :id)
   end
